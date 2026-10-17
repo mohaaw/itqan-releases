@@ -1,77 +1,80 @@
-# Itqan — Download Center
+<div align="center">
 
-> **Official download page for the Itqan company-operations app (Android).**
-> Always download from here or from inside the app's updater — never from third parties.
+# إتقان · ITQAN
 
-**Itqan** is the all-in-one company app: tasks with Kanban boards and checklists,
-approval requests, WhatsApp-grade chat, video meetings, instant and scheduled
-notifications, reports, contracts and quotes — in English and Arabic, with a
-beautiful dark theme.
+### The company platform for approvals, tasks, contracts, meetings and attendance — all in one app
+
+**أدوات العمل بتمكّن** — tools that empower the work
+
+[![Latest Release](https://img.shields.io/github/v/release/mohaaw/itqan-releases?include_prereleases=false)](https://github.com/mohaaw/itqan-releases/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Android-blue)](#installation)
+[![Architecture](https://img.shields.io/badge/Flutter-full_stack-green)](https://flutter.dev)
+[![License](https://img.shields.io/badge/license-proprietary-red)](#license)
+
+</div>
 
 ---
 
-## ⬇️ Latest version — 1.8.2
+## What is ITQAN?
 
-| Your device | File | Size |
+**Itqan** (Arabic: إتقان — *"doing things with excellence"*) is an Arabic-first enterprise operations platform for companies and teams. It replaces scattered chats, paper approvals and manual attendance with a single app that everyone — **owner, manager, supervisor, employee, HR and support** — uses every day.
+
+| Section | What it covers |
+|---|---|
+| **Approvals & Requests** | Multi-step approval workflows with full history: leave, expenses, permission and custom request types |
+| **Tasks** | Unit-of-work tracking between employees and managers |
+| **Contracts & Documents** | Organised per request, with secure file access |
+| **Meetings** | Structured agendas and follow-ups |
+| **Attendance & Shifts** | Time records with supervisor corrections |
+| **Dashboards** | Live counters for active / pending review / completed items |
+| **Notifications** | Deep links to the exact item, with per-user mute preferences |
+| **Delegation (Deputy)** | Exact permission matching so a deputy can act with no more and no less than was granted |
+| **Password manager integration** | Save passwords reliably from your phone's credential vault |
+| **In-app updater** | Self-updates per CPU architecture with gentle rollout flags |
+
+## Installation
+
+Download the right APK from **[the latest release](https://github.com/mohaaw/itqan-releases/releases/latest)**:
+
+| Your device | Download |
+|---|---|
+| **Modern phones / tablets (2016+)** | `*-new-devices-arm64-v8a.apk` |
+| **Older phones (pre-2016)** | `*-old-devices-armeabi-v7a.apk` |
+| **Emulators / Chrome*x** | `*-emulators-x86_64.apk` |
+
+Then: Enable "install from this source" → install → open ITQAN. Data and settings are preserved across updates (same signing key). The in-app updater keeps you current from then on.
+
+## Release channels
+
+| Channel | Purpose | Cadence |
 |---|---|---|
-| **New phones** (most devices since ~2018, 64-bit) | [itqan-1.8.2-new-devices-arm64-v8a.apk](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-new-devices-arm64-v8a.apk) | 70.9 MB |
-| **Older phones** (32-bit) | [itqan-1.8.2-old-devices-armeabi-v7a.apk](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-old-devices-armeabi-v7a.apk) | 59.5 MB |
-| **Emulators** (PC) | [itqan-1.8.2-emulators-x86_64.apk](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-emulators-x86_64.apk) | 75.6 MB |
+| **Stable** | Daily-use channel for all users | As needed |
+| (in-repo notes) | Changelog history per release | Every release |
 
-**What's new in 1.8.2:** notifications that arrive exactly on schedule, blue-tick
-read receipts, unread badges, in-chat search, starred messages, typing indicators,
-task checklists, and faster sync. ([Full changelog](https://github.com/mohaaw/itqan-releases/releases/tag/v1.8.2))
+Every release notes its build number, target Android version and per-file sha256 checksums for verification.
 
-### 📲 How to install
-1. Download the file matching your device above (usually the **new-devices** one).
-2. Open it — allow **"Install unknown apps"** for your browser when asked.
-3. Log in with your company account. Updates arrive automatically inside the app.
+## Version history (summary)
 
-> The app updates itself: when a new version is published, you'll be notified
-> in-app and can download it directly — no need to revisit this page.
-
----
-
-## 🕘 Version history
-
-| Version | Highlights | Downloads |
+| Version | Theme | Status |
 |---|---|---|
-| **1.8.2** | On-time scheduled notifications, blue ticks, unread badges, chat search, checklists | [arm64](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-new-devices-arm64-v8a.apk) · [armeabi](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-old-devices-armeabi-v7a.apk) · [x86_64](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-emulators-x86_64.apk) |
-| **1.8.1** | Review-filter fix, Kanban toggle, checklists, photo thumbnails, multi-image pick | [Release page](https://github.com/mohaaw/itqan-releases/releases/tag/v1.8.1) |
-| **1.8.0** | Full chat, Kanban board, control room | [Release page](https://github.com/mohaaw/itqan-releases/releases/tag/v1.8.0) |
+| **1.8.10** | Stability and trust — 26 crash paths closed, dashboard counters honest, cold-start notifications, deputy exact-matching | ✅ Latest |
+| 1.8.9 | Security tightening + crash-guard foundation | ✅ Previous |
+| earlier | Iterative feature and deployment releases (1.8.0 → 1.8.8) | 🗄 History |
+
+## Privacy & security model
+
+- **Cloud-hosted backend** with per-role database security (row-level access).
+- **Signed releases** — every APK is signed with the same production key; an update from the official channel never loses your identity or data.
+- **Per-device updater** that downloads only the right CPU build, silently when gentle flags are on, and only ever with your confirmation on device.
+
+## Contact
+
+For questions or support, use the in-app support route or the repository's private channels — public issues on this repo are for release announcements.
 
 ---
 
-## 🔮 Coming next
+<div align="center">
 
-Full Arabic/English polish of every screen, message forwarding, group-admin tools,
-an even faster startup — then learning courses (LMS), HR, CRM and more modules.
+*ITQAN · إتقان · ١.٨.١٠*
 
----
-
-## 🇪🇬 بالعربية
-
-# إتقان — صفحة التنزيل
-
-> **الصفحة الرسمية لتنزيل تطبيق إتقان لإدارة الشركات (أندرويد).**
-> نزّل دائمًا من هنا أو من محدّث التطبيق نفسه — ولا تثق بأي مصدر آخر.
-
-**إتقان** تطبيق الشركة الشامل: مهام بلوحات كانبان وقوائم تحقق، وطلبات واعتمادات،
-ومحادثات بمستوى واتساب، واجتماعات فيديو، وإشعارات فورية تُرسل في موعدها، وتقارير
-وعقود وعروض أسعار — بالعربية والإنجليزية وبمظهر داكن أنيق.
-
-### ⬇️ أحدث إصدار — 1.8.2
-| جهازك | الملف | الحجم |
-|---|---|---|
-| **الهواتف الحديثة** (معظم الأجهزة منذ ~2018) | [itqan-1.8.2-new-devices-arm64-v8a.apk](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-new-devices-arm64-v8a.apk) | 70.9 ميغابايت |
-| **الهواتف القديمة** (32-بت) | [itqan-1.8.2-old-devices-armeabi-v7a.apk](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-old-devices-armeabi-v7a.apk) | 59.5 ميغابايت |
-| **المحاكيات** (الكمبيوتر) | [itqan-1.8.2-emulators-x86_64.apk](https://github.com/mohaaw/itqan-releases/releases/download/v1.8.2/itqan-1.8.2-emulators-x86_64.apk) | 75.6 ميغابايت |
-
-**الجديد في 1.8.2:** إشعارات تصل في موعدها بالضبط، وعلامات القراءة الزرقاء،
-وشارات غير المقروء، والبحث داخل المحادثة، والرسائل المميزة، وقوائم التحقق،
-ومزامنة أسرع.
-
-### 📲 طريقة التثبيت
-1. نزّل الملف المناسب لجهازك (غالبًا نسخة **الأجهزة الحديثة**).
-2. افتحه — واسمح بـ **«تثبيت التطبيقات غير المعروفة»** للمتصفح عند الطلب.
-3. سجّل الدخول بحساب شركتك. التحديثات تصلك تلقائيًا داخل التطبيق.
+</div>
